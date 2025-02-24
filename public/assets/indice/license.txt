@@ -1,0 +1,11 @@
+Model Information:
+* title:	Escape Room VR Chalkboard Clue
+* source:	https://sketchfab.com/3d-models/escape-room-vr-chalkboard-clue-0258ec9152bd47a9b7619f0cdcd59f3a
+* author:	nickheitzman (https://sketchfab.com/nickheitzman)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Escape Room VR Chalkboard Clue" (https://sketchfab.com/3d-models/escape-room-vr-chalkboard-clue-0258ec9152bd47a9b7619f0cdcd59f3a) by nickheitzman (https://sketchfab.com/nickheitzman) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

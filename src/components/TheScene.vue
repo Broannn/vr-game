@@ -8,6 +8,7 @@
 
   import '../aframe/simple-grab.js';
   import '../aframe/outline.js';
+  import '../aframe/flicker-light.js';
 
   defineProps({
     scale: Number,
@@ -53,18 +54,71 @@
       -->
       <a-asset-item id="physic-room" src="assets/3d_gallery_for_vr_projects.glb"></a-asset-item>
       <a-asset-item id="sound-1" response-type="arraybuffer" src="assets/sound1.mp3" preload="auto"></a-asset-item>
+      <a-asset-item id="level" src="assets/egypt_chamber_for_ar__vr_games/scene.gltf"></a-asset-item>
+      <a-asset-item id="character" src="assets/mummy_character/scene.gltf"></a-asset-item>
+      <a-asset-item id="torch" src="assets/torch/scene.gltf"></a-asset-item>
+      <a-asset-item id="bougie" src="assets/bougies/scene.gltf"></a-asset-item>
+      <a-asset-item id="indice" src="assets/indice/scene.gltf"></a-asset-item>
+
       <img id="room-physic-out-texture" :src="`assets/main-room-from-physic-room.png`">
       <img id="room-gol-out-texture" :src="`assets/main-room-from-gol-room.png`">
       <img id="room-physic-texture" :src="`assets/physicRoom.png`">
     </a-assets>
 
     <template v-if="allAssetsLoaded">
-      <TheMainRoom :scale="scale" />
-      <TheLifeCubeRoom />
-      <ThePhysicRoom />
+      <a-entity
+        gltf-model="#level"
+        position="74.930 -5.000 -2.180" 
+        scale="0.01 0.01 0.01"
+      ></a-entity>
+      <a-box position="0 0 0" scale="1 1 1"></a-box>
+      <!-- <a-light type="ambient" color="#888"></a-light>
+      <a-light type="directional" color="#fff" intensity="1" position="-1 2 1"></a-light>-->
+      <a-entity
+        gltf-model="#bougie"
+        position="50.887 4 1.852" 
+        scale="3 3 3"
+      ></a-entity>
+      <a-entity
+        gltf-model="#indice"
+        position="50.887 4 1.852" 
+        scale="1 1 1"
+      ></a-entity>
+      <a-entity
+        gltf-model="#character"
+        position="50.907 0.610 -3.798" 
+        scale="50 50 50"
+      ></a-entity>
+
+      <!-- Objet Torch tenable et illuminant avec des flammes animées -->
+      <a-entity
+  gltf-model="#torch"
+  position="50.907 0.610 -1.798" 
+  scale="0.25 0.19 0.25"
+  simple-grab
+  clickable
+>
+  <!-- Lumière de la torche avec un scintillement naturel -->
+  <a-entity 
+    light="type: point; color: #FFA500; intensity: 4; distance: 30;" 
+    position="0 0.6 0"
+    flicker-light="minIntensity: 1.5; maxIntensity: 2.8; minDuration: 300; maxDuration: 800">
+  </a-entity>
+
+  <!-- Effet de particules en mode "fire" pour des flammes réalistes -->
+  <a-entity
+    particle-system="preset: fire; particleCount: 150; size: 0.15; opacity: 0.8; 
+                     accelerationValue: 0 1 0; velocityValue: 0 2 0; positionSpread: 0.1 0.2 0.1;"
+    position="0 0.6 0">
+  </a-entity>
+</a-entity>
+
     </template>
 
-    <TheCameraRig />
+    <TheCameraRig 
+      __position="55.437 0 361.072"
+      position="50.887 4 1.852"
+    ></TheCameraRig>
 
   </a-scene>
 </template>
