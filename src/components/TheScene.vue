@@ -68,33 +68,31 @@
     <template v-if="allAssetsLoaded">
       <a-entity
         gltf-model="#level"
-        position="74.930 -5.000 -2.180" 
-        scale="0.01 0.01 0.01"
+        scale="0.005 0.005 0.005"
+        position="13.070 -3.920 -4.760"
       ></a-entity>
-      <a-box position="0 0 0" scale="1 1 1"></a-box>
-      <!-- <a-light type="ambient" color="#888"></a-light>
-      <a-light type="directional" color="#fff" intensity="1" position="-1 2 1"></a-light>-->
+      <a-box position="0 0 0" scale="1 1 1"
+      simple-grab
+      clickable></a-box>
+       <a-light type="ambient" color="#888"></a-light>
+      <a-light type="directional" color="#fff" intensity="1" position="-1 2 1"></a-light>
       <a-entity
         gltf-model="#bougie"
-        position="50.887 4 1.852" 
-        scale="3 3 3"
+        scale="1 1 1"
       ></a-entity>
       <a-entity
         gltf-model="#indice"
-        position="50.887 4 1.852" 
         scale="1 1 1"
       ></a-entity>
       <a-entity
         gltf-model="#character"
-        position="50.907 0.610 -3.798" 
-        scale="50 50 50"
+        scale="1 1 1"
       ></a-entity>
 
       <!-- Objet Torch tenable et illuminant avec des flammes animées -->
       <a-entity
   gltf-model="#torch"
-  position="50.907 0.610 -1.798" 
-  scale="0.25 0.19 0.25"
+  scale="1 1 1"
   simple-grab
   clickable
 >
@@ -116,8 +114,6 @@
     </template>
 
     <TheCameraRig 
-      __position="55.437 0 361.072"
-      position="50.887 4 1.852"
     ></TheCameraRig>
 
   </a-scene>

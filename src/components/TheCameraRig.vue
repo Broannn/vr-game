@@ -2,7 +2,6 @@
   import '../aframe/disable-in-vr.js';
   import '../aframe/hide-in-vr.js';
   import '../aframe/simple-navmesh-constraint.js';
-  import '../aframe/blink-controls.js';
   import '../aframe/physx-grab.js';
 </script>
 
@@ -44,12 +43,6 @@
     <a-entity
       id="hand-left"
       hand-controls="hand: left"
-      blink-controls="
-        cameraRig: #camera-rig;
-        teleportOrigin: #head;
-        collisionEntities: [data-role='nav-mesh'];
-        snapTurn: false;
-      "
       position="0 1.5 0"
       physx-grab
     >
