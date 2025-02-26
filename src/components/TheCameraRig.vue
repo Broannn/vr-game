@@ -8,7 +8,7 @@
 <template>
   <a-entity
     id="camera-rig"
-    movement-controls="camera: #head; speed: 0.6;" 
+    movement-controls="camera: #head; speed: 0.3;" 
     __disable-in-vr="component: movement-controls;"
     physx-body="type: kinematic; shape: capsule; radius: 0.3; height: 1.65;"
   >
