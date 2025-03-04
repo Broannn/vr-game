@@ -10,7 +10,7 @@ export function quitGame(time) {
     text.setAttribute('baseline', 'center');
     text.setAttribute('width', 2);
     text.setAttribute('wrapCount', 30);
-    text.setAttribute('position', '0 0 -1.5');
+    text.setAttribute('position', '0 0 -1.2');
     text.setAttribute('color', '#ffffff');
     text.setAttribute('opacity', 100);
     text.setAttribute('visible', true);
