@@ -1,85 +1,85 @@
-<p align="center">
-    <img src="./logo.svg" alt="VAV Logo" align="center"/>
-</p>
-<h1 align="center">Vue + A-Frame + Vite boilerplate</h1>
+# 🏺 Tomb of the Ruined King
 
-> A boilerplate for A-Frame 1.7, Vue 3.5 and Vite 5.4
+Une aventure immersive en réalité virtuelle où vous explorez le tombeau mystérieux d'un roi déchu.
 
-![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
-![A-Frame](https://img.shields.io/badge/A%E2%80%93Frame-1.7-brightgreen?style=for-the-badge&labelColor=%23ef2d5e&color=%23ef2d5e)
-![Threejs](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)
-![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+## 🎮 Description
 
-### [>> DEMO <<](https://onivers.com/aframe-vue-boilerplate/)
+Dans cette expérience VR, vous incarnez un aventurier déterminé à percer les secrets du **"Tomb of the Ruined King"**. Votre mission : explorer un temple ancien, résoudre des énigmes et manipuler des objets pour progresser dans l'exploration.
 
-## Included in the boilerplate
+## 🏜️ Objectif du jeu
 
-### Libs and components
+- Explorer le tombeau à la recherche de la légendaire richesse.
+- Utiliser une torche pour révéler des indices cachés.
+- Décrypter des codes et activer des mécanismes antiques.
 
-- [aframe-extras](https://github.com/c-frame/aframe-extras) (MIT License)
-- [aframe physx](https://github.com/c-frame/physx) (MIT License)
-- [aframe-blink-controls](https://github.com/jure/aframe-blink-controls) (MIT License)
-- [aframe-multi-camera](https://github.com/diarmidmackenzie/aframe-multi-camera/) (MIT License)
-- [simple-navmesh-constraint](https://github.com/AdaRoseCannon/aframe-xr-boilerplate) (MIT Licence)
+## 🚀 Installation & Lancement
 
-### Movement modes support
-
-- **Desktop** – Keyboard for move (_WASD_ or Arrows keys) + Mouse for look control (Drag and drop)
-- **Mobile** – 1x Finger touch to go forward + 2x Fingers touch to go backward + Gaze cursor for click
-- **VR/AR** – walk + Teleport (Grip for grab and laser for click) + Gaze cursor for click in AR
-
-### 3D models
-
-- **Main room** – [VR Gallery](https://sketchfab.com/3d-models/vr-gallery-1ac32ed62fdf424498acc146fad31f7e) by [Maxim Mavrichev](https://sketchfab.com/mvrc.art) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- **3D physic room** – [3d_gallery_for_vr_projects](https://sketchfab.com/3d-models/3d-gallery-for-vr-projects-68f77ed8558c4bd59e0a13e2cc9d1fd1) by [tekuto1s](https://sketchfab.com/tekuto1s) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
----
-
-## Quickstart
-
-### Create a folder for your project and move to it
-
-### Clone (or fork, or download)
+### 1️⃣ Cloner le projet
 
 ```sh
 git clone https://github.com/Chabloz/a-frame-vite-vue-boilerplate.git .
 ```
 
-### Install dependencies
+### 2️⃣ Installer les dépendances
 
 ```sh
-npm ci
+npm install
 ```
 
-### Dev
+### 3️⃣ Démarrer le projet en mode développement
 
 ```sh
 npm run dev
 ```
 
-### Build
+### 4️⃣ Créer une version optimisée pour la production
 
 ```sh
 npm run build
 ```
 
-## Notes for local dev on VR headset
+## 🥽 Jouer en VR
 
-1. Check that your development device and your VR headset are connected on **the same network**.
-
-2. Expose you local development:
+1. Assurez-vous que votre ordinateur et votre casque VR sont connectés sur **le même réseau**.
+2. Démarrez le serveur de développement en mode réseau accessible :
 
 ```sh
 npm run dev-expose
 ```
 
-3. In your VR headset, browse to the local development adress `[ip]:[port]`.
+3. Ouvrez le navigateur de votre casque VR et accédez à **[ip]:[port]**.
 
-> [!NOTE]
-> The certificate is self-signed, so you will probably have to confirm access to the resource in your browser.
+> ⚠️ Le certificat SSL est auto-signé, vous devrez peut-être valider l'accès.
+
+## 📦 Technologies utilisées
+
+### 📚 Frameworks & Libraries
+
+- **A-Frame 1.7** – Moteur VR/WebXR.
+- **Vue 3** – Framework JavaScript réactif.
+- **Vite** – Outil de build rapide.
+- **aframe-extras** – Physique et interactions avancées.
+- **aframe-physx** – Gestion avancée de la physique.
+- **aframe-blink-controls** – Système de téléportation VR.
+
+## 🎨 Modèles 3D utilisés
+
+### 🏛️ Environnements
+
+- **Egypt Chamber for AR/VR Games** - by [Arloopa](https://sketchfab.com/3d-models/egypt-chamber-for-ar-vr-games-80f945448d7146edb32b78a14caa0910) *(CC BY 4.0)*
+
+### 🔥 Objets et accessoires
+
+- **Burning Torch** - by [Nortenko Dmytro](https://sketchfab.com/3d-models/non-textured-burning-torch-1-ee937f7c641a4366824ea583d3ad75a8) *(CC BY 4.0)*
+- **Candle** - by [deniska40k](https://sketchfab.com/3d-models/candle-c408586d8c1547448c4ff47abb4fb981) *(CC BY 4.0)*
+- **Candles Set** - by [shuvalov.di](https://sketchfab.com/3d-models/candles-set-f09212756bc94764a8bcfcd3c7e38f8e) *(CC BY 4.0)*
+
+## 🔖 Licence
+
+Ce projet est sous licence **MIT**.
 
 ---
 
-## License
+## 🐱 Le savais-tu ?
 
-![MIT License](https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge&color=%23262626)
+*Avoir un chat, c'est trop cool !* 😺 **Trop bien ouais.** Et bien laisse-moi t'expliquer pourquoi avoir un chat c'est super de nous, considère ça... Alors... Euhhhh les chats rendent la vie moins euhh... stressante et la compagnie de eux fait du biennage à nous tous. Et oui. Voilà. **C'est pour ça que les Égyptiens vénéraient les chats.** 🏺
