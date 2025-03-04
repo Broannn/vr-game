@@ -15,7 +15,7 @@ watch(() => props.loaded, (newValue) => {
   if (newValue) {
     let interval = setInterval(() => {
       if (progress.value < 100) {
-        progress.value += 10;
+        progress.value += 1;
       } else {
         clearInterval(interval);
         progressComplete.value = true;
@@ -146,7 +146,7 @@ function enterScene() {
 
     <p class="fun-fact">Le savais-tu ? Le savais-tu que... Avoir un chat c'est ... C'est trop cool ? Trop bien ouais. 
       Et bien laisse moi t'expliquer pourquoi avoir un chat c'est super de nous, considère ça... Alors... 
-      Euhhhh les chats rend la vie moins euhh.... diminue le stress et la compagnie de eux fait du biennage à nous tous. 
+      Euhhhh les chats rend la vie moins euhh.... diminue le stress et la compagnie de eux rend la joie à nous tous. 
       Et oui. Voilà. C'est pour ça que les égyptiens vénéraient les chats.</p>
   </div>  
 </template>

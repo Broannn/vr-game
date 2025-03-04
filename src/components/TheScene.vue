@@ -298,7 +298,7 @@ defineProps({
         geometry="primitive: cylinder; height: 1; radius: 0.1;"
         material="shader: flat; color: #FFA500; opacity: 0"
         scale="0.5 0.5 0.5"
-        position="1.550 1.300 12.040"
+        position="1.550 1.300 11.090"
         rotation="0 0 17.000"
         sound="src: url(assets/fire.mp3); autoplay: false; loop: true; volume: 0.3"
         torch-sound
@@ -337,7 +337,7 @@ defineProps({
         position="0.340 1 -18.260"
         scale="0.7 1 0.120"
         emit-when-near="target: #torch-container; distance: 2; event: quitgame;"
-        quitgame-listener="event: quitgame; time: 7500;"
+        quitgame-listener="event: quitgame; time: ;"
       ></a-entity>
     </template>
 
