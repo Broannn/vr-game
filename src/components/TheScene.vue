@@ -12,7 +12,10 @@ import '../aframe/listen-to.js';
 import '../aframe/event-set.js';
 import '../aframe/torch-sound.js';
 import '../aframe/super-keyboard.js';
-import '../aframe/simple-navmesh-constraint.js'; 
+import '../aframe/simple-navmesh-constraint.js';
+import '../aframe/quitgame.js'
+import '../aframe/quitgame-listener.js'
+import '../aframe/emit-when-near.js'
 
 
 const enteredCode = ref("");
@@ -63,7 +66,7 @@ const handleKeyboardInput = (event) => {
     });
     doorElement.setAttribute(
       'sound',
-      'src: url(/assets/dooropen.mp3); autoplay: true; volume: 0.7'
+      'src: url(assets/dooropen.mp3); autoplay: true; volume: 1'
     );
   }
 }
@@ -82,7 +85,6 @@ defineProps({
 <template>
   <!-- Scène A-Frame -->
   <a-scene
-    stats
     background="color: black;"
     :webxr="`
       requiredFeatures: local-floor;
@@ -102,7 +104,7 @@ defineProps({
   >
     <!-- Son d'ambiance, inchangé -->
     <a-entity
-      sound="src: url(assets/ambiance.mp3); autoplay: true; loop: true; volume: 2"
+      sound="src: url(assets/ambiance.mp3); autoplay: true; loop: true; volume: 2; positional: false"
     ></a-entity>
 
     <!-- (POINT 3) On met @loaded="allAssetsLoaded = true" 
@@ -218,7 +220,7 @@ defineProps({
       <a-light type="ambient" color="#888"></a-light>
       <a-light type="directional" color="#fff" intensity="1" position="-1 2 1"></a-light>-->
     
-      <a-entity gltf-model="#bougie" position="1.900 -1.060 0" scale="2 2 2">
+      <a-entity gltf-model="#bougie" position="1.900 -1.160 0" scale="2 2 2">
         <a-entity
           light="type: point; color: #FFA500; intensity: 1; distance: 3; decay: 2;"
           position="0 0.6 0"
@@ -226,7 +228,7 @@ defineProps({
         ></a-entity>
       </a-entity>
 
-      <a-entity gltf-model="#bougie" position="-5.770 -1.060 -9.450" scale="2 2 2">
+      <a-entity gltf-model="#bougie" position="-5.770 -1.160 -9.450" scale="2 2 2">
         <a-entity
           light="type: point; color: #FFA500; intensity: 1; distance: 3; decay: 2;"
           position="0 0.6 0"
@@ -250,7 +252,7 @@ defineProps({
         ></a-entity>
       </a-entity>
 
-      <a-entity gltf-model="#bougiesolo" position="-8.340 0.220 -13.310" scale="0.07 0.07 0.07">
+      <a-entity gltf-model="#bougiesolo" position="-8.340 0.160 -13.310" scale="0.07 0.07 0.07">
         <a-entity
           light="type: point; color: #FFA500; intensity: 0.182; distance: 2.180; decay: 1.900;"
           position="0 1.910 0"
@@ -317,15 +319,26 @@ defineProps({
           event-set__taken_scale="event:taken; attribute: scale; value: 0.09 0.09 0.09"
           event-set__untaken_scale="event: untaken; attribute: scale; value: 0.09 0.09 0.09"
         >
-          <a-entity
-            light="type: point; color: #FFA500; intensity: 4; distance: 8;"
+            <a-entity
+            light="type: point; color: #FFA500; intensity: 5; distance: 10;"
             position="-0.130 11.190 0"
-            flicker-light="minIntensity: 2; maxIntensity: 3.8; minDuration: 300; maxDuration: 800"
+            flicker-light="minIntensity: 3; maxIntensity: 4.5; minDuration: 300; maxDuration: 800"
             event-set__taken="position: -3.630 7.500 -2.230; parent: #torch-model"
             event-set__untaken="position: 0 11.190 0; parent: #torch-model"
-          ></a-entity>
+            ></a-entity>
         </a-entity>
       </a-entity>
+
+     <!-- LE TRIGGER : -->
+     <a-entity
+        id="end-trigger"
+        geometry="primitive: box; width: 2; height: 3; depth: 2"
+        material="opacity: 0; color: red; wireframe: true"
+        position="0.340 1 -18.260"
+        scale="0.7 1 0.120"
+        emit-when-near="target: #torch-container; distance: 2; event: quitgame;"
+        quitgame-listener="event: quitgame; time: 7500;"
+      ></a-entity>
     </template>
 
     <!-- Rig de la caméra -->
